@@ -1,6 +1,8 @@
 package id.ac.polinema.settingsexample;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,16 +10,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.view.Menu;
-import android.view.MenuItem;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import id.ac.polinema.settingsexample.fragments.AdvancedFragment;
-import id.ac.polinema.settingsexample.fragments.DialogsFragment;
-import id.ac.polinema.settingsexample.fragments.HomeFragment;
-import id.ac.polinema.settingsexample.fragments.SettingsFragment;
-import id.ac.polinema.settingsexample.fragments.WidgetsFragment;
+import id.ac.polinema.settingsexample.fragments.*;
 
 public class MainActivity extends AppCompatActivity
     implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 			// TODO: open settings here using openFragment()
+            openFragment(new SettingsFragment());
             return true;
         }
 
